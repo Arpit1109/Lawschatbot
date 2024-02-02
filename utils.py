@@ -1,6 +1,7 @@
 import textwrap
 import numpy as np
 import pandas as pd
+import streamlit as st
 # import faiss
 import openai
 import langchain
@@ -13,7 +14,7 @@ import os
 
 # pdf_path = os.path.join("data", "lawsofpower.pdf")
 
-openai.api_key=OPEN_API_KEY
+openai.api_key=st.secrets["OPEN_API_KEY"]
 
 
 
@@ -74,8 +75,8 @@ def question_query(question):
         return query_vector
 
 from pinecone import Pinecone
-
-pc = Pinecone(api_key=PINECONE_API_KEY)
+key=st.secrets["PINECONE_API_KEY"]
+pc = Pinecone(api_key=)
 index = pc.Index("canopy--document-uploader")
 
 def question_answering_model(query_vector):
