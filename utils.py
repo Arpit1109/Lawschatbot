@@ -13,7 +13,7 @@ import os
 
 # pdf_path = os.path.join("data", "lawsofpower.pdf")
 
-openai.api_key="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"
+openai.api_key=OPEN_API_KEY
 
 
 
@@ -75,7 +75,7 @@ def question_query(question):
 
 from pinecone import Pinecone
 
-pc = Pinecone(api_key="1abb2126-b2f6-45f2-9d1b-f28deabf9699")
+pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index("canopy--document-uploader")
 
 def question_answering_model(query_vector):
