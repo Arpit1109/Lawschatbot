@@ -76,7 +76,7 @@ def question_query(question):
 
 from pinecone import Pinecone
 key=st.secrets["PINECONE_API_KEY"]
-pc = Pinecone(api_key=)
+pc = Pinecone(api_key=key)
 index = pc.Index("canopy--document-uploader")
 
 def question_answering_model(query_vector):
