@@ -1,0 +1,18 @@
+unstructured
+tiktoken
+# faiss-cpu
+# PyPDF2
+langchain
+pandas 
+numpy
+langchain-community
+streamlit
+streamlit_chat
+openai==0.27.7 
+pinecone-client==3.0.0
+
+
+
+
+
+
